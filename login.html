@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+</head>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+<body>
+    <label for="email">
+        Email:
+        <input type="text" id="email">
+    </label>
+<br>
+    <br>
+    <label for="password">
+        Password:
+        <input type="text" id="password">
+    </label>
+    <br>
+    <br>
+    <button onclick="login()">Login</button>
+    <p>Go back to Signup Page <a href="signup.html">Signup Page
+    </a></p>
+
+    <script>
+        function login(){
+            let userEmail = document.getElementById("email").value;
+            let storageEmail = localStorage.getItem("userEmail");
+
+            let userPassword = document.getElementById("password").value;
+            let storagePassword = localStorage.getItem("userPassword");
+
+            if(userEmail == storageEmail){
+                if(userPassword == storagePassword){
+                    alert("You're now logged in")
+                }else{
+                    alert("Password is not correct")
+                }
+            }else{
+                alert("Email is not correct")
+            }
+        }
+    </script>
+</body>
+</html>
